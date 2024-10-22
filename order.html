@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Your Order</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+body{
+      background-image: url(img//vegetables-set-left-black-slate.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        h3{color: #ff4500;
+        text-align: center;}
+        .order-form {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* To position the close button */
+        }
+        .order-form h2 {
+            text-align: center;
+        }
+        .order-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .order-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .order-form input[type="submit"] {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .order-form input[type="submit"]:hover {
+            background-color: #ff4500;
+        }
+        .order-summary img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .order-summary .price {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            font-size: 20px;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .close-btn:hover {
+            background-color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="order-form">
+        <!-- Close button -->
+        <button class="close-btn" onclick="closeForm()">X</button>
+        
+        <h2>Place Your Order</h2>
+        <div class="order-summary">
+            <img id="foodImage" src="" alt="Food Image">
+            <h3 id="foodItem">Food Item</h3>
+            <div class="price" id="foodPrice">$0.00</div>
+        </div>
+        <form action="menuu.html" method="POST">
+            <input type="hidden" id="foodItemInput" name="foodItem" value="">
+            <input type="hidden" id="foodPriceInput" name="foodPrice" value="">
+
+            <label for="customerName">Customer Name:</label>
+            <input type="text" id="customerName" name="customerName" required>
+
+            <label for="customerPhone">Customer Phone Number:</label>
+            <input type="tel" id="customerPhone" name="customerPhone" required>
+
+            <label for="customerAddress">Customer Address:</label>
+            <input type="text" id="customerAddress" name="customerAddress" required>
+
+            <input type="submit" value="Submit Order">
+        </form>
+    </div>
+
+    <script>
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const foodItem = urlParams.get('item');
+        const foodPrice = urlParams.get('price');
+        const foodImage = urlParams.get('image');
+
+        // Update the order page with the food item, price, and image
+        if (foodItem && foodPrice && foodImage) {
+            document.getElementById('foodItem').innerText = foodItem.replace('_', ' ');
+            document.getElementById('foodPrice').innerText = `$${foodPrice}`;
+            document.getElementById('foodImage').src = foodImage;
+            
+            // Set hidden input values to send to server
+            document.getElementById('foodItemInput').value = foodItem;
+            document.getElementById('foodPriceInput').value = foodPrice;
+        }
+
+        // Function to close the form
+        function closeForm() {
+            window.location.href = 'royal food paradise menu.html';  // Redirect to the menu page when 'X' is clicked
+        }
+    </script>
+
+</body>
+</html>

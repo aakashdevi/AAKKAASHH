@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+          body{
+      background-image: url(img//vegetables-set-left-black-slate.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        h1{
+            display: block;
+            text-align: center;
+        }
+        .food-item {
+            background-color: white;
+            width: 250px;
+            margin: 15px;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .food-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .food-item h3 {
+            margin: 10px 0;
+            color: #ff4500;
+        }
+        .food-item .price {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .food-item a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .food-item a:hover {
+            background-color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="color: #ff4500; font-weight:900;">Our Menu</h1>
+    
+
+    <div class="menu-container">
+        <!-- Example of one food item -->
+        <div class="food-item">
+            <img src="img//Biriyani.jpg" alt="Biriyani">
+            <h3>Biriyani</h3>
+            <div class="price">$10.99</div>
+            <a href="order.html?item=Biriyani&price=10.99&image=img//biriyani.jpg">Order Now</a>
+        </div>
+
+        <div class="food-item">
+            <img src="img//mutton biriyani.jpg" alt="Mutton Biriyani">
+            <h3>Mutton Biriyani</h3>
+            <div class="price">$13.99</div>
+            <a href="order.html?item=Mutton_Biriyani&price=13.99&image=img//mutton biriyani.jpg">Order Now</a>
+        </div>
+
+        <div class="food-item">
+            <img src="img//fish meals.jpg " alt="Fish Meals">
+            <h3>Fish Meals</h3>
+            <div class="price">$12.49</div>
+            <a href="order.html?item=Fish_Meals&price=12.49&image=img//fish meals.jpg">Order Now</a>
+        </div>
+
+        <div class="food-item">
+            <img src="img//noodles.jpg" alt="Noodles">
+            <h3>Noodles</h3>
+            <div class="price">$12.49</div>
+            <a href="order.html?item=Noodles&price=12.49&image=img//noodles.jpg">Order Now</a>
+        </div>
+
+        <div class="food-item">
+            <img src="img//friedrice.jpg" alt="Fish Meals">
+            <h3>Fried Rice</h3>
+            <div class="price">$12.49</div>
+            <a href="order.html?item=Fried Rice&price=12.49&image=img//friedrice.jpg">Order Now</a>
+        </div>
+
+        <div class="food-item">
+            <img src="img//meals.jpg" alt="Fish Meals">
+            <h3> Meals</h3>
+            <div class="price">$12.49</div>
+            <a href="order.html?item=Meals&price=12.49&image=img//meals.jpg">Order Now</a>
+        </div>
+
+        <div class="food-item">
+            <img src="img//dosa.jpg" alt="Fish Meals">
+            <h3> Dosa </h3>
+            <div class="price">$12.49</div>
+            <a href="order.html?item=Dosa&price=12.49&image=img//dosa.jpg">Order Now</a>
+        </div>
+
+        <div class="food-item">
+            <img src="img//idli.jpg" alt=" Idle">
+            <h3> Idli</h3>
+            <div class="price">$12.49</div>
+            <a href="order.html?item=Idli&price=12.49&image=img// idli.jpg">Order Now</a>
+        </div>
+
+
+       
+
+
+       
+
+
+       
+    </div>
+
+</body>
+</html>
